@@ -1,0 +1,37 @@
+# ~/.bashrc
+
+eval `ssh-agent -s`
+clear
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+if [[ $(($RANDOM % 10)) -eq 4 ]]; then
+    echo "Pas de caca à Intermarché Neyrpic Belledone"
+fi
+
+
+# CUSTOM FUNCTIONS AND ALIASES
+alias ls='ls -X --color=auto'
+alias grep='grep --color=auto'
+
+wifi () {
+    if [[ $1 == "on" ]]; then
+        command nmcli radio wifi on
+    elif [[ $1 == "off" ]]; then
+        command nmcli radio wifi off
+    elif [[ $1 == "list" || $1 == "l" ]]; then
+        command nmcli dev wifi list
+    elif [[ $1 == "connect" || $1 == "c" ]]; then
+        command nmcli dev wifi connect
+    elif [[ $1 == "vpn" ]]; then
+        command expect vpn
+    elif [[ $1 == "ping" || $1 == "p" ]]; then
+        command ping archlinux.org
+    else
+        echo "Usage: wifi [ on | off | list | connect | vpn | ping ]"
+    fi
+}
+
+# PS1='[\u@\h \W]\$ '
+PS1='\[\e[93;1m\]\w\[\e[0m\] 󰁕 '
+
