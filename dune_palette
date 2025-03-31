@@ -1,0 +1,36 @@
+background #200203
+foreground #f3d786
+cursor #f3d786
+
+black
+color0 #200203
+color8 #aa965d
+
+red
+color1 #D66A09
+color9 #D66A09
+
+green
+color2 #E97909
+color10 #E97909
+
+yellow
+color3 #F68E0E
+color11 #F68E0E
+
+blue
+color4 #FAAB19
+color12 #FAAB19
+
+magenta
+color5 #D88F21
+color13 #D88F21
+
+cyan
+color6 #FBB823
+color14 #FBB823
+
+white
+color7 #f3d786
+color15 #f3d786
+
